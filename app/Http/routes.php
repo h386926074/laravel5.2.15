@@ -17,9 +17,15 @@ Route::get('/', function () {
 Route::get('basic1',function(){
     return 'hello world';
 });
-Route::get('basic2',function(){
+Route::post('basic3',function(){
     return 'hello world';
 });
+
+Route::match(['get','post'],'basic2',function (){
+    return 'match';
+});
+
+
 
 /*
 |--------------------------------------------------------------------------
