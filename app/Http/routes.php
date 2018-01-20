@@ -25,7 +25,14 @@ Route::match(['get','post'],'basic2',function (){
     return 'match';
 });
 
+Route::any('multy2',function() {
+   return 'multy2';
+});
 
+//路由参数
+Route::get('user/{id}',function ($id){
+    return 'User-' . $id;
+});
 
 /*
 |--------------------------------------------------------------------------
